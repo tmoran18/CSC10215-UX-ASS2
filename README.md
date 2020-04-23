@@ -6,3 +6,7 @@ Assignment 2 code
 Communication: Discord - Invite Only  
 User Interface/Wireframe: Figma - Invite Only  
 Documentation: Google Docs - Invite Only  
+
+
+# Todo List
+- [ ] Task 1
