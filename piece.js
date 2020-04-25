@@ -63,8 +63,8 @@ class Piece {
   }
 
   rotationMovement() {
-    this.rotateMatrix();
     this.transpose();
+    this.rotateMatrix();
     this.updatePiecePosition();
   }
 }

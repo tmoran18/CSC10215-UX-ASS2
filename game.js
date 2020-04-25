@@ -3,7 +3,7 @@ let newPiece;
 
 function setup() {
   createCanvas(canvasWidth, canvasHeight);
-  newPiece = new Piece(piece_S, width / 2, boxDimension, {
+  newPiece = new Piece(piece_J, width / 2, boxDimension, {
     r: 250,
     g: 48,
     b: 95,
