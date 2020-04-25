@@ -24,7 +24,16 @@ function applyGravity() {
 }
 
 function keyPressed() {
-  if (keyCode === UP_ARROW) {
+  if (key === ' ') {
     newPiece.rotationMovement();
+  }
+  if (keyCode === LEFT_ARROW) {
+    newPiece.x -= boxDimension;
+  }
+  if (keyCode === RIGHT_ARROW) {
+    newPiece.x += boxDimension;
+  }
+  if (keyCode === DOWN_ARROW) {
+    applyGravity();
   }
 }
