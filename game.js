@@ -22,3 +22,9 @@ function draw() {
 function applyGravity() {
   newPiece.y += boxDimension;
 }
+
+function keyPressed() {
+  if (keyCode === UP_ARROW) {
+    newPiece.rotationMovement();
+  }
+}

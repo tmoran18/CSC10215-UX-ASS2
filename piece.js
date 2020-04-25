@@ -23,7 +23,7 @@ class Piece {
               boxDimension,
               this.color
             )
-          : null
+          : 0
       )
     );
   }
@@ -31,7 +31,7 @@ class Piece {
   show() {
     this.updatePiecePosition();
     this.shape.forEach((x) =>
-      x.filter((j) => j != null).forEach((box) => box.show())
+      x.filter((j) => j != 0).forEach((box) => box.show())
     );
   }
 
@@ -45,6 +45,27 @@ class Piece {
         }
       })
     );
+  }
+
+  rotateMatrix() {
+    this.shape.reverse()[0].map((column, index) => {
+      this.shape.map((row) => row[index]);
+    });
+  }
+
+  transpose() {
+    let dimension = this.shape.length;
+    let aux = Array.from(new Array(dimension), (e) =>
+      Array.from(new Array(dimension), (x) => null)
+    );
+    this.shape.forEach((row, i) => row.forEach((col, j) => (aux[j][i] = col)));
+    this.shape = aux;
+  }
+
+  rotationMovement() {
+    this.rotateMatrix();
+    this.transpose();
+    this.updatePiecePosition();
   }
 }
 
