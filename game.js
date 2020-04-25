@@ -1,28 +1,24 @@
 let tetrisBox;
-let myPiece;
+let newPiece;
 
 function setup() {
   createCanvas(canvasWidth, canvasHeight);
-  //   tetrisBox = new Box(width / 2, height / 2, boxDimension, {
-  //     r: 250,
-  //     g: 48,
-  //     b: 95,
-  //   });
-  myPiece = new Piece(piece_S, width / 2, boxDimension, {
+  newPiece = new Piece(piece_S, width / 2, boxDimension, {
     r: 250,
     g: 48,
     b: 95,
   });
-  //setInterval(() => applyGravity(), timer);
+  // Uses a timer and applyGravity function to move pieces down
+  // Speed of gravity can be changed by modifying the timer
+  setInterval(() => applyGravity(), timer);
 }
 
 function draw() {
   background(backgroundColor);
-  //tetrisBox.show();
-  myPiece.show();
+  newPiece.show();
 }
 
 // Each second(timer) box will move 30px(boxDimension)
 function applyGravity() {
-  tetrisBox.y += boxDimension;
+  newPiece.y += boxDimension;
 }
