@@ -67,6 +67,22 @@ class Piece {
     this.rotateMatrix();
     this.updatePiecePosition();
   }
+
+  // shape is a dimensional array
+  // filter out any boxes that are null
+  // filter out any boxes that pass the collission function
+  // if higher than 0 - box is colliding
+  canCollide(collision) {
+    return (
+      this.shape.reduce(
+        (z, row) =>
+          z.concat(
+            row.filter((col) => col != null).filter((box) => collision(box))
+          ),
+        []
+      ).length > 0
+    );
+  }
 }
 
 //Tried to replicate the fillPiece() function in a for loop rather than ES6 syntax

@@ -46,3 +46,5 @@ const piece_T = [
   [1, 1, 1],
   [0, 1, 0],
 ];
+
+const pieces = [piece_O, piece_I, piece_S, piece_Z, piece_L, piece_J, piece_T];
