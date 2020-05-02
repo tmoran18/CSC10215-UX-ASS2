@@ -1,0 +1,70 @@
+/* Global Styles */
+html,
+body {
+  padding: 0px;
+  margin: 0px;
+  background: black;
+}
+
+.main {
+  max-width: 800px;
+  min-height: 800px;
+  margin: auto;
+  position: relative;
+}
+
+.btn {
+  width: 180px;
+}
+
+.btn:hover {
+  transform: scale(1.2);
+  opacity: 0.7;
+  transition: all ease 0.2s;
+}
+/* Home Styles */
+.home_bg {
+  background: url("./asssets/images/home_background.jpg");
+}
+.btns_bottom {
+  position: absolute;
+  width: 100%;
+  bottom: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.btns_top {
+  position: absolute;
+  width: 730px;
+  top: 40px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 30px;
+}
+
+.block_t_container {
+  padding-top: 130px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.blocks_animation_container {
+  border: 1px solid red;
+  position: absolute;
+  bottom: 0;
+  width: 230px;
+  height: 300px;
+}
+/* Tutorial Page Styles */
+/* Credits page styles */
+.credits_bg {
+  background: url("./asssets/images/credits_background.jpg");
+}
+
+/* Game page styles */
+/* Game Over page styles */
+.gameover_bg {
+  background: url("./asssets/images/gameover_background.jpg");
+}
