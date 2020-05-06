@@ -88,6 +88,7 @@ body {
 #stats {
   display: inline-block;
   vertical-align: top;
+  display: none;
 }
 #canvas {
   display: inline-block;
@@ -143,6 +144,14 @@ body {
   font-family: 'Passion One', Arial;
   color: #f4d03f;
   font-size: 48px;
+}
+
+.menu_btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 400px;
+  justify-content: space-around;
 }
 /* Game Over page styles */
 .gameover_bg {
