@@ -1,6 +1,7 @@
-@import url("https://fonts.googleapis.com/css?family=Passion+One:400,700&display=swap");
-
+@import url('https://fonts.googleapis.com/css?family=Passion+One:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:500&display=swap');
 /* font-family: 'Passion One', Arial; */
+/* font-family: 'Roboto', sans-serif; */
 /* Yellow: #F4D03F */
 /* Light Blue: #81d4fa; */
 /* Green: #9EFF64 */
@@ -35,7 +36,7 @@ body {
 }
 /* Home Styles */
 .home_bg {
-  background: url("./asssets/images/home_background.jpg");
+  background: url('./asssets/images/home_background.jpg');
 }
 
 .btns_bottom {
@@ -72,7 +73,7 @@ body {
 /* Tutorial Page Styles */
 /* Credits page styles */
 .credits_bg {
-  background: url("./asssets/images/credits_background.jpg");
+  background: url('./asssets/images/credits_background.jpg');
 }
 
 /* Game page styles */
@@ -80,7 +81,7 @@ body {
   margin: 1em auto;
   padding: 1em;
   /* //border: 4px solid red; */
-  background: url("./asssets/images/game_background.jpg");
+  background: url('./asssets/images/game_background.jpg');
   width: 800px;
   height: 900px;
 }
@@ -91,22 +92,27 @@ body {
 #canvas {
   display: inline-block;
   vertical-align: top;
-  background: black;
-  border: 2px solid #333;
+  /* background: black; */
+  border: 2px solid #f4d03f;
+  background-size: 40px 40px;
+  background-image: linear-gradient(to right, #414141 2px, transparent 1px),
+    linear-gradient(to bottom, #414141 2px, #303030 1px);
 }
+
 #menu {
   display: inline-block;
   vertical-align: top;
   position: relative;
-  border: 1px solid red;
 }
 #menu p {
-  margin: 0.5em 0;
   text-align: center;
 }
 #menu p a {
+  font-family: ;
   text-decoration: none;
-  color: black;
+  color: #f4d03f;
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
 }
 #upcoming {
   display: block;
@@ -125,6 +131,7 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
 .blue_box {
   border: 3px solid #81d4fa;
   width: 270px;
@@ -133,19 +140,19 @@ body {
   justify-content: center;
   align-items: center;
   background: rgba(64, 61, 205, 0.4);
-  font-family: "Passion One", Arial;
+  font-family: 'Passion One', Arial;
   color: #f4d03f;
   font-size: 48px;
 }
 /* Game Over page styles */
 .gameover_bg {
-  background: url("./asssets/images/gameover_background.jpg");
+  background: url('./asssets/images/gameover_background.jpg');
 }
 
 .game_container {
-  border: 2px solid blue;
   display: flex;
   justify-content: space-between;
+  margin-top: 20px;
 }
 /* Game Page Media Queries */
 @media screen and (min-width: 0px) and (min-height: 0px) {

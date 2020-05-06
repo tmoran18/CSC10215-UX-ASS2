@@ -43,7 +43,7 @@
         return document.getElementById(id);
       }
       function hide(id) {
-        get(id).style.visibility = "hidden";
+        get(id).style.visibility = 'hidden';
       }
       function show(id) {
         get(id).style.visibility = null;
@@ -81,10 +81,10 @@
       var KEY = { ESC: 27, SPACE: 32, LEFT: 37, UP: 38, RIGHT: 39, DOWN: 40 },
         DIR = { UP: 0, RIGHT: 1, DOWN: 2, LEFT: 3, MIN: 0, MAX: 3 },
         stats = new Stats(),
-        canvas = get("canvas"),
-        ctx = canvas.getContext("2d"),
-        ucanvas = get("upcoming"),
-        uctx = ucanvas.getContext("2d"),
+        canvas = get('canvas'),
+        ctx = canvas.getContext('2d'),
+        ucanvas = get('upcoming'),
+        uctx = ucanvas.getContext('2d'),
         speed = { start: 0.6, decrement: 0.005, min: 0.1 }, // how long before piece drops by 1 row (seconds)
         nx = 10, // width of tetris court (in blocks)
         ny = 20, // height of tetris court (in blocks)
@@ -126,37 +126,37 @@
       var i = {
         size: 4,
         blocks: [0x0f00, 0x2222, 0x00f0, 0x4444],
-        color: "cyan",
+        color: '#14AA5B',
       };
       var j = {
         size: 3,
         blocks: [0x44c0, 0x8e00, 0x6440, 0x0e20],
-        color: "blue",
+        color: '#00ACED',
       };
       var l = {
         size: 3,
         blocks: [0x4460, 0x0e80, 0xc440, 0x2e00],
-        color: "orange",
+        color: '#F27521',
       };
       var o = {
         size: 2,
         blocks: [0xcc00, 0xcc00, 0xcc00, 0xcc00],
-        color: "yellow",
+        color: '#FFF109',
       };
       var s = {
         size: 3,
         blocks: [0x06c0, 0x8c40, 0x6c00, 0x4620],
-        color: "green",
+        color: '#ED2b2d',
       };
       var t = {
         size: 3,
         blocks: [0x0e40, 0x4c40, 0x4e00, 0x4640],
-        color: "purple",
+        color: '#C71A8D',
       };
       var z = {
         size: 3,
         blocks: [0x0c60, 0x4c80, 0xc600, 0x2640],
-        color: "red",
+        color: '#323393',
       };
 
       //------------------------------------------------
@@ -266,13 +266,13 @@
       }
 
       function showStats() {
-        stats.domElement.id = "stats";
-        get("menu").appendChild(stats.domElement);
+        stats.domElement.id = 'stats';
+        get('menu').appendChild(stats.domElement);
       }
 
       function addEvents() {
-        document.addEventListener("keydown", keydown, false);
-        window.addEventListener("resize", resize, false);
+        document.addEventListener('keydown', keydown, false);
+        window.addEventListener('resize', resize, false);
       }
 
       function resize(event) {
@@ -323,12 +323,12 @@
       //-------------------------------------------------------------------------
 
       function play() {
-        hide("start");
+        hide('start');
         reset();
         playing = true;
       }
       function lose() {
-        show("start");
+        show('start');
         setVisualScore();
         playing = false;
       }
@@ -527,7 +527,9 @@
 
       function draw() {
         ctx.save();
-        ctx.lineWidth = 1;
+        ctx.lineWidth = 2;
+        ctx.lineJoin = 'round';
+        ctx.lineCap = 'round';
         ctx.translate(0.5, 0.5); // for crisp 1px black lines
         drawCourt();
         drawNext();
@@ -554,13 +556,17 @@
 
       function drawNext() {
         if (invalid.next) {
-          var padding = (nu - next.type.size) / 2; // half-arsed attempt at centering next piece display
+          uctx.lineWidth = 2;
+          uctx.lineJoin = 'round';
+          uctx.lineCap = 'round';
+          var padding = (nu - next.type.size) / 2;
           uctx.save();
           uctx.translate(0.5, 0.5);
           uctx.clearRect(0, 0, nu * dx, nu * dy);
           drawPiece(uctx, next.type, padding, padding, next.dir);
-          uctx.strokeStyle = "black";
+          uctx.strokeStyle = 'black';
           uctx.strokeRect(0, 0, nu * dx - 1, nu * dy - 1);
+
           uctx.restore();
           invalid.next = false;
         }
@@ -568,14 +574,14 @@
 
       function drawScore() {
         if (invalid.score) {
-          html("score", ("00000" + Math.floor(vscore)).slice(-5));
+          html('score', ('00000' + Math.floor(vscore)).slice(-5));
           invalid.score = false;
         }
       }
 
       function drawRows() {
         if (invalid.rows) {
-          html("rows", rows);
+          html('rows', rows);
           invalid.rows = false;
         }
       }
