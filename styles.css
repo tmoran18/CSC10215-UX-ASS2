@@ -98,7 +98,7 @@ html, body {
   height: 900px;
 }
 
-#stats {
+stats {
   display: inline-block;
   vertical-align: top;
   display: none;
