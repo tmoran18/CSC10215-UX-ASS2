@@ -98,12 +98,6 @@ html, body {
   height: 900px;
 }
 
-stats {
-  display: inline-block;
-  vertical-align: top;
-  display: none;
-}
-
 #canvas {
   display: inline-block;
   vertical-align: top;
