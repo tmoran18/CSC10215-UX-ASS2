@@ -23,7 +23,7 @@ html, body {
 .main {
   max-width: 800px;
   min-height: 800px;
-  margin: auto;
+  margin: 50px auto;
   position: relative;
 }
 
