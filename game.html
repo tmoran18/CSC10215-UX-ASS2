@@ -330,6 +330,9 @@
       show('start');
       setVisualScore();
       playing = false;
+      // Navigate to gameover page
+      localStorage.setItem("score", score);
+      window.location.href = 'gameover.html';
     }
 
     function setVisualScore(n) {
@@ -460,8 +463,11 @@
         setCurrentPiece(next);
         setNextPiece(randomPiece());
         clearActions();
+        // GAME OVER
         if (occupied(current.type, current.x, current.y, current.dir)) {
+
           lose();
+
         }
       }
     }
