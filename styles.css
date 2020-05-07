@@ -1,15 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Passion+One:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto:500&display=swap');
 /* font-family: 'Passion One', Arial; */
+
 /* font-family: 'Roboto', sans-serif; */
+
 /* Yellow: #F4D03F */
+
 /* Light Blue: #81d4fa; */
+
 /* Green: #9EFF64 */
+
 /* Opac blue background: rgba(64, 61, 205, 0.4); */
 
 /* Global Styles */
-html,
-body {
+
+html, body {
   padding: 0px;
   margin: 0px;
   background: black;
@@ -29,12 +34,15 @@ body {
 .green_font {
   color: #9eff64;
 }
+
 .btn:hover {
   transform: scale(1.2);
   opacity: 0.7;
   transition: all ease 0.2s;
 }
+
 /* Home Styles */
+
 .home_bg {
   background: url('./asssets/images/home_background.jpg');
 }
@@ -70,13 +78,17 @@ body {
   width: 230px;
   height: 300px;
 }
+
 /* Tutorial Page Styles */
+
 /* Credits page styles */
+
 .credits_bg {
   background: url('./asssets/images/credits_background.jpg');
 }
 
 /* Game page styles */
+
 #tetris {
   margin: 1em auto;
   padding: 1em;
@@ -85,19 +97,20 @@ body {
   width: 800px;
   height: 900px;
 }
+
 #stats {
   display: inline-block;
   vertical-align: top;
   display: none;
 }
+
 #canvas {
   display: inline-block;
   vertical-align: top;
   /* background: black; */
   border: 2px solid #f4d03f;
   background-size: 40px 40px;
-  background-image: linear-gradient(to right, #414141 2px, transparent 1px),
-    linear-gradient(to bottom, #414141 2px, #303030 1px);
+  background-image: linear-gradient(to right, #414141 2px, transparent 1px), linear-gradient(to bottom, #414141 2px, #303030 1px);
 }
 
 #menu {
@@ -105,9 +118,11 @@ body {
   vertical-align: top;
   position: relative;
 }
+
 #menu p {
   text-align: center;
 }
+
 #menu p a {
   font-family: ;
   text-decoration: none;
@@ -115,6 +130,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: normal;
 }
+
 #upcoming {
   display: block;
   margin: 0 auto;
@@ -153,7 +169,9 @@ body {
   height: 400px;
   justify-content: space-around;
 }
+
 /* Game Over page styles */
+
 .gameover_bg {
   background: url('./asssets/images/gameover_background.jpg');
 }
@@ -163,7 +181,9 @@ body {
   justify-content: space-between;
   margin-top: 20px;
 }
+
 /* Game Page Media Queries */
+
 @media screen and (min-width: 0px) and (min-height: 0px) {
   #tetris {
     font-size: 0.75em;
@@ -181,7 +201,10 @@ body {
     width: 100px;
     height: 200px;
   }
-} /* 10px chunks */
+}
+
+/* 10px chunks */
+
 @media screen and (min-width: 400px) and (min-height: 400px) {
   #tetris {
     font-size: 1em;
@@ -199,7 +222,9 @@ body {
     width: 150px;
     height: 300px;
   }
-} /* 15px chunks */
+}
+
+/* 15px chunks */
 
 @media screen and (min-width: 500px) and (min-height: 500px) {
   #tetris {
@@ -218,7 +243,9 @@ body {
     width: 200px;
     height: 400px;
   }
-} /* 20px chunks */
+}
+
+/* 20px chunks */
 
 @media screen and (min-width: 600px) and (min-height: 600px) {
   #tetris {
@@ -237,7 +264,10 @@ body {
     width: 250px;
     height: 500px;
   }
-} /* 25px chunks */
+}
+
+/* 25px chunks */
+
 @media screen and (min-width: 700px) and (min-height: 700px) {
   #tetris {
     font-size: 1.75em;
@@ -255,7 +285,10 @@ body {
     width: 300px;
     height: 600px;
   }
-} /* 30px chunks */
+}
+
+/* 30px chunks */
+
 @media screen and (min-width: 800px) and (min-height: 800px) {
   #tetris {
     font-size: 2em;
@@ -273,7 +306,10 @@ body {
     width: 350px;
     height: 700px;
   }
-} /* 35px chunks */
+}
+
+/* 35px chunks */
+
 @media screen and (min-width: 900px) and (min-height: 900px) {
   #tetris {
     font-size: 2.25em;
