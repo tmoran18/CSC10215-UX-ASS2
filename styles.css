@@ -41,6 +41,8 @@ html, body {
   transition: all ease 0.2s;
 }
 
+
+
 /* Home Styles */
 
 .home_bg {
@@ -57,11 +59,11 @@ html, body {
 
 .btns_top {
   position: absolute;
-  width: 730px;
+  width: 700px;
   top: 40px;
   display: flex;
   justify-content: space-between;
-  margin-left: 30px;
+  margin-left: 50px;
 }
 
 .block_t_container {
@@ -87,6 +89,31 @@ html, body {
   background: url('./asssets/images/credits_background.jpg');
 }
 
+.references {
+  border:1px solid red;
+  padding:100px 30px 50px 30px;
+  font-family: 'Roboto', sans-serif;
+  color:#f4d03f;
+}
+
+.image_ref {
+  border:1px solid red;
+}
+
+.ref_content {
+  display:flex;
+  justify-content: space-between;
+  color:white;
+}
+.left_content {
+  width:200px;
+  border:1px solid blue;
+}
+
+.right_content {
+  max-width:500px;
+  border:1px solid blue;
+}
 /* Game page styles */
 
 #tetris {
