@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Passion+One:400,700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Roboto:500&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Passion+One:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:500&display=swap");
 /* font-family: 'Passion One', Arial; */
 
 /* font-family: 'Roboto', sans-serif; */
@@ -14,7 +14,8 @@
 
 /* Global Styles */
 
-html, body {
+html,
+body {
   padding: 0px;
   margin: 0px;
   background: black;
@@ -41,12 +42,15 @@ html, body {
   transition: all ease 0.2s;
 }
 
-
-
+.flex_div {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
 /* Home Styles */
 
 .home_bg {
-  background: url('./asssets/images/home_background.jpg');
+  background: url("./asssets/images/home_background.jpg");
 }
 
 .btns_bottom {
@@ -86,33 +90,23 @@ html, body {
 /* Credits page styles */
 
 .credits_bg {
-  background: url('./asssets/images/credits_background.jpg');
+  background: url("./asssets/images/credits_background.jpg");
 }
 
 .references {
-  border:1px solid red;
-  padding:100px 30px 50px 30px;
-  font-family: 'Roboto', sans-serif;
-  color:#f4d03f;
+  padding: 100px 30px 50px 30px;
+  font-family: "Roboto", sans-serif;
+  color: #f4d03f;
 }
 
-.image_ref {
-  border:1px solid red;
-}
-
-.ref_content {
-  display:flex;
-  justify-content: space-between;
-  color:white;
-}
 .left_content {
-  width:200px;
-  border:1px solid blue;
+  width: 200px;
+  border: 1px solid blue;
 }
 
 .right_content {
-  max-width:500px;
-  border:1px solid blue;
+  max-width: 500px;
+  border: 1px solid blue;
 }
 /* Game page styles */
 
@@ -120,7 +114,7 @@ html, body {
   margin: 1em auto;
   padding: 1em;
   /* //border: 4px solid red; */
-  background: url('./asssets/images/game_background.jpg');
+  background: url("./asssets/images/game_background.jpg");
   width: 800px;
   height: 900px;
 }
@@ -131,7 +125,8 @@ html, body {
   /* background: black; */
   border: 2px solid #f4d03f;
   background-size: 40px 40px;
-  background-image: linear-gradient(to right, #414141 2px, transparent 1px), linear-gradient(to bottom, #414141 2px, #303030 1px);
+  background-image: linear-gradient(to right, #414141 2px, transparent 1px),
+    linear-gradient(to bottom, #414141 2px, #303030 1px);
 }
 
 #menu {
@@ -145,10 +140,10 @@ html, body {
 }
 
 #menu p a {
-/* font-family: ; removed this because it was an error */ 
+  /* font-family: ; removed this because it was an error */
   text-decoration: none;
   color: #f4d03f;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: normal;
 }
 
@@ -178,7 +173,7 @@ html, body {
   justify-content: center;
   align-items: center;
   background: rgba(64, 61, 205, 0.4);
-  font-family: 'Passion One', Arial;
+  font-family: "Passion One", Arial;
   color: #f4d03f;
   font-size: 48px;
 }
@@ -194,7 +189,7 @@ html, body {
 /* Game Over page styles */
 
 .gameover_bg {
-  background: url('./asssets/images/gameover_background.jpg');
+  background: url("./asssets/images/gameover_background.jpg");
 }
 
 .game_container {
