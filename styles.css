@@ -91,6 +91,14 @@ body {
 
 /* Tutorial Page Styles */
 
+.tutorial_bg {
+  background: url('./assets/images/tutorial_background.jpg');
+}
+
+.tutorial_bg .btns_bottom {
+  bottom:30px;
+}
+
 /* Credits page styles */
 
 .credits_bg {
