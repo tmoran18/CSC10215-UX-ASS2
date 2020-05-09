@@ -457,6 +457,7 @@ function removeLines() {
     if (n > 0) {
         addRows(n);
         addScore(100 * Math.pow(2, n - 1)); // 1: 100, 2: 200, 3: 400, 4: 800
+        window.Canvas = new Universe(element);
     }
 }
 
@@ -623,3 +624,5 @@ function drawBlock(ctx, x, y, color) {
 //-------------------------------------------------------------------------
 
 run();
+
+// Animation
