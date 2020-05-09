@@ -55,7 +55,7 @@ body {
 /* Home Styles */
 
 .home_bg {
-  background: url("./asssets/images/home_background.jpg");
+  background: url("./assets/images/home_background.jpg");
 }
 
 .btns_bottom {
@@ -94,7 +94,7 @@ body {
 /* Credits page styles */
 
 .credits_bg {
-  background: url("./asssets/images/credits_background.jpg");
+  background: url("./assets/images/credits_background.jpg");
 }
 
 .references {
@@ -118,7 +118,7 @@ body {
   margin: 1em auto;
   padding: 1em;
   /* //border: 4px solid red; */
-  background: url("./asssets/images/game_background.jpg");
+  background: url("./assets/images/game_background.jpg");
   width: 800px;
   height: 900px;
 }
@@ -193,7 +193,7 @@ body {
 /* Game Over page styles */
 
 .gameover_bg {
-  background: url("./asssets/images/gameover_background.jpg");
+  background: url("./assets/images/gameover_background.jpg");
 }
 
 .game_container {
