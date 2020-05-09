@@ -594,7 +594,7 @@ function setScoreStats() {
     localStorage.setItem("lines", rows);
     setHighestScore();
 }
-
+// NEW CODE
 function setHighestScore() {
     if (localStorage.highestScore) {
         if (localStorage.highestScore < score) {

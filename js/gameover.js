@@ -1,3 +1,14 @@
+// Scores
+
+gameoverScore = localStorage.getItem('score');
+gameoverLevel = localStorage.getItem('level');
+gameoverLines = localStorage.getItem('lines');
+gameoverHighScore = localStorage.getItem('highestScore')
+document.querySelector('#id_score').innerText = gameoverScore;
+document.querySelector('#id_level').innerText = gameoverLevel;
+document.querySelector('#id_lines').innerText = gameoverLines;
+document.querySelector('.highScore').innerText = gameoverHighScore;
+
 // Star Animation
 var gameOverPage = document.querySelector('.gameover_bg');
 for (let i = 0; i < 50; i++) {
