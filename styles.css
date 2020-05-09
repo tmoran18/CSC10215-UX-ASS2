@@ -47,6 +47,11 @@ body {
   justify-content: space-between;
   color: white;
 }
+
+.mute_btn {
+  cursor: pointer;
+  z-index: 1;
+}
 /* Home Styles */
 
 .home_bg {
