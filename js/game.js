@@ -69,8 +69,8 @@ var dx,
     score, // the current score
     vscore, // the currently displayed score (it catches up to score in small chunks - like a spinning slot machine)
     rows, // number of completed rows in the current game
-    step; // how long before current piece drops by 1 row
-
+    step, // how long before current piece drops by 1 row
+    level = 1;
 //-------------------------------------------------------------------------
 // tetris pieces
 //
@@ -417,6 +417,7 @@ function drop() {
         addScore(10);
         dropPiece();
         removeLines();
+        increaseLevel(); // NEW CODE
         setCurrentPiece(next);
         setNextPiece(randomPiece());
         clearActions();
@@ -494,6 +495,7 @@ function draw() {
     drawNext();
     drawScore();
     drawRows();
+    drawLevel(); // NEW CODE
     ctx.restore();
 }
 
@@ -542,6 +544,43 @@ function drawRows() {
     if (invalid.rows) {
         html('rows', rows);
         invalid.rows = false;
+    }
+}
+
+// NEW CODE
+function drawLevel() {
+    document.querySelector('#level').innerText = level;
+}
+
+// NEW CODE
+function increaseLevel() {
+    if (score > 499 && score < 1000) {
+        level = 2;
+        speed.start = 0.55;
+    } else if (score > 999 && score < 1500) {
+        level = 3;
+        speed.start = 0.5;
+    } else if (score > 1499 && score < 2000) {
+        level = 4;
+        speed.start = 0.45;
+    } else if (score > 1999 && score < 2500) {
+        level = 5;
+        speed.start = 0.4;
+    } else if (score > 2499 && score < 3000) {
+        level = 6;
+        speed.start = 0.35;
+    } else if (score > 2999 && score < 3500) {
+        level = 7;
+        speed.start = 0.3
+    } else if (score > 2999 && score < 3500) {
+        level = 8;
+        speed.start = 0.25
+    } else if (score > 3499 && score < 4000) {
+        level = 9;
+        speed.start = 0.2
+    } else if (score > 3999 && score < 4500) {
+        level = 10;
+        speed.start = 0.15
     }
 }
 
