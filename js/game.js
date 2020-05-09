@@ -44,9 +44,9 @@ if (!window.requestAnimationFrame) {
 
 var KEY = { ESC: 27, SPACE: 32, LEFT: 37, UP: 38, RIGHT: 39, DOWN: 40 },
     DIR = { UP: 0, RIGHT: 1, DOWN: 2, LEFT: 3, MIN: 0, MAX: 3 },
-    stats = new Stats(),
+    //stats = new Stats(),
     canvas = document.getElementById("canvas")
-    ctx = canvas.getContext('2d'),
+ctx = canvas.getContext('2d'),
     ucanvas = get('upcoming'),
     uctx = ucanvas.getContext('2d'),
     speed = { start: 0.6, decrement: 0.005, min: 0.1 }, // how long before piece drops by 1 row (seconds)
@@ -211,7 +211,6 @@ function randomPiece() {
 //-------------------------------------------------------------------------
 
 function run() {
-    showStats(); // initialize FPS counter
     addEvents(); // attach keydown and resize events
 
     var last = (now = timestamp());
@@ -219,7 +218,6 @@ function run() {
         now = timestamp();
         update(Math.min(1, (now - last) / 1000.0)); // using requestAnimationFrame have to be able to handle large delta's caused when it 'hibernates' in a background or non-visible tab
         draw();
-        stats.update();
         last = now;
         requestAnimationFrame(frame, canvas);
     }
@@ -229,10 +227,6 @@ function run() {
     frame(); // start the first frame
 }
 
-function showStats() {
-    stats.domElement.id = 'stats';
-    get('menu').appendChild(stats.domElement);
-}
 
 function addEvents() {
     document.addEventListener('keydown', keydown, false);
@@ -295,6 +289,7 @@ function lose() {
     show('start');
     setVisualScore();
     playing = false;
+    window.location.href = "gameover.html";
 }
 
 function setVisualScore(n) {
