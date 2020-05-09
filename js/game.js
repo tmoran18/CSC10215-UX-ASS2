@@ -70,7 +70,8 @@ var dx,
     vscore, // the currently displayed score (it catches up to score in small chunks - like a spinning slot machine)
     rows, // number of completed rows in the current game
     step, // how long before current piece drops by 1 row
-    level = 1;
+    level = 1,
+    highestScore;
 //-------------------------------------------------------------------------
 // tetris pieces
 //
@@ -289,6 +290,7 @@ function lose() {
     show('start');
     setVisualScore();
     playing = false;
+    setScoreStats();
     window.location.href = "gameover.html";
 }
 
@@ -581,6 +583,26 @@ function increaseLevel() {
     } else if (score > 3999 && score < 4500) {
         level = 10;
         speed.start = 0.15
+    }
+}
+
+// NEW CODE
+function setScoreStats() {
+    localStorage.setItem("score", score);
+    localStorage.setItem("level", level);
+    localStorage.setItem("lines", rows);
+    setHighestScore();
+}
+
+function setHighestScore() {
+    if (localStorage.highestScore) {
+        if (localStorage.highestScore < score) {
+            localStorage.highestScore = score;
+        } else {
+            return;
+        };
+    } else {
+        localStorage.setItem("highestScore", score)
     }
 }
 

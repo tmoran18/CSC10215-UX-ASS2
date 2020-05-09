@@ -198,6 +198,65 @@ body {
   margin-top: 20px;
 }
 
+.highScore{
+  color:dodgerblue;
+  text-align: center;
+  font-size:70px;
+  font-family: "Passion One", Arial;
+  padding-top:160px;
+
+}
+
+.gameover_bg .stats_container {
+  margin-top:250px;
+}
+.gameover_bg .stats_container > div {
+  font-size:35px;
+  border:none;
+  background:none;
+}
+
+.gameover_bg .stats_container .level {
+  margin-top:45px;
+}
+
+/* STARS ANIMATION */
+
+img.glitter-star {
+  position: absolute;
+  height: 16px;
+  width: 16px;
+
+  animation: glitter 2s linear 0s infinite normal;
+  -webkit-animation: glitter 2s linear 0s infinite normal;
+  -moz-animation: glitter 2s linear 0s infinite normal;
+  -ms-animation: glitter 2s linear 0s infinite normal;
+  -o-animation: glitter 2s linear 0s infinite normal;
+}
+
+@keyframes glitter {
+  0% {
+    -webkit-transform: scale(2.0);
+    opacity: 1;
+  }
+  25% {
+    -webkit-transform: scale(1);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: scale(2.0);
+    opacity: 1;
+  }
+  75% {
+    -webkit-transform: scale(1);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(2.0);
+    opacity: 1;
+  }
+}
+
 /* Game Page Media Queries */
 
 @media screen and (min-width: 0px) and (min-height: 0px) {
