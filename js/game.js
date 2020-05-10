@@ -409,6 +409,7 @@ function move(dir) {
 function rotate() {
     var newdir = current.dir == DIR.MAX ? DIR.MIN : current.dir + 1;
     if (unoccupied(current.type, current.x, current.y, newdir)) {
+        blockRotate.play();
         current.dir = newdir;
         invalidate();
     }
@@ -418,6 +419,7 @@ function drop() {
     if (!move(DIR.DOWN)) {
         addScore(10);
         dropPiece();
+        blockPlace.play();
         removeLines();
         increaseLevel(); // NEW CODE
         setCurrentPiece(next);
