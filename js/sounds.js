@@ -31,6 +31,8 @@ const clickSound = new Audio('../assets/sounds/menu/button_click_sound.mp3');
 const blockRotate = new Audio('../assets/sounds/game/block_rotate_sound.mp3');
 const blockPlace = new Audio('../assets/sounds/game/block_place_sound.mp3');
 const levelUp = new Audio('../assets/sounds/game/level_up.wav');
+const pressPlay = new Audio('../assets/sounds/game/press_play.wav');
+const lineComplete = new Audio('../assets/sounds/game/row_complete/row_complete_sound_1.wav');
 
 // Adjust the volumes
 homeMusic.volume = 0.05;
@@ -39,14 +41,14 @@ gameMusic.volume = 0.07;
 blockRotate.volume = 0.05;
 blockPlace.volume = 0.05;
 gameoverMusic.volume = 0.07;
+pressPlay.volume = 0.07;
 
 // If the url contains X, then play the music specific to that page
 if (window.location.pathname.includes('index')) {
   homeMusic.pause();
   homeMusic.loop = true;
-  let musicPlaying = homeMusic;
 } else if (window.location.pathname.includes('game')) {
-  gameMusic.pause();
+  gameMusic.play();
   gameMusic.loop = true;
   // add in the music file location
   // adjust volume
@@ -88,3 +90,7 @@ for (const button of buttons) {
     mouseOnSound.play();
   });
 }
+
+document.querySelector('.play_btn').addEventListener('click', function () {
+  pressPlay.play();
+});
