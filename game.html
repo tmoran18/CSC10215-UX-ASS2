@@ -1,56 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <script src="js/game.js"></script> -->
+    <style>
+      #canvas2 {
+        position: absolute;
+        bottom: 0;
+      }
+    </style>
+  </head>
 
-<head>
-  <link rel="stylesheet" href="styles.css" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <!-- <script src="js/game.js"></script> -->
-  <style>
-    #canvas2 {
-      position: absolute;
-      bottom: 0;
-    }
-  </style>
-</head>
-
-<body>
-  <div id="tetris">
-    <div class="stats_container">
-      <div class="score blue_box">
-        Score:&nbsp;<span class="green_font" id="score"> 120</span>
+  <body>
+    <div id="tetris">
+      <div class="stats_container">
+        <div class="score blue_box">Score:&nbsp;<span class="green_font" id="score"> 120</span></div>
+        <div class="level blue_box">Level:&nbsp;<span class="green_font" id="level"> 2</span></div>
+        <div class="lines blue_box">Lines:&nbsp;<span class="green_font" id="rows"> 12</span></div>
       </div>
-      <div class="level blue_box">
-        Level:&nbsp;<span class="green_font" id="level"> 2</span>
-      </div>
-      <div class="lines blue_box">
-        Lines:&nbsp;<span class="green_font" id="rows"> 12</span>
-      </div>
-    </div>
-    <div class="game_container">
-      <canvas id="canvas">
-        Sorry, this example cannot be run because your browser does not
-        support the &lt;canvas&gt; element
-      </canvas>
-      <!-- Canvas for the Explosion Animation -->
-      <canvas id="canvas2"></canvas>
-      <div id="menu">
-        <p id="start">
-          <a href="javascript:play();">Press Space to Play.</a>
-        </p>
-        <p><canvas id="upcoming"></canvas></p>
-        <div class="menu_btns">
-          <a href="index.html"><img src="./assets/images/home_button.png" alt="" class="btn" /></a>
-          <a href="tutorial.html"><img src="./assets/images/tutorial_button_red.png" alt="" class="btn"/></a>
-          <img src="./assets/images/speaker_play.png" width="80" alt="" class="mute_btn"/>
+      <div class="game_container">
+        <canvas id="canvas">
+          Sorry, this example cannot be run because your browser does not support the &lt;canvas&gt; element
+        </canvas>
+        <!-- Canvas for the Explosion Animation -->
+        <canvas id="canvas2"></canvas>
+        <div id="menu">
+          <p id="start">
+            <a href="javascript:play();">Press Space to Play.</a>
+          </p>
+          <p><canvas id="upcoming"></canvas></p>
+          <div class="menu_btns">
+            <a href="index.html"><img src="./assets/images/home_button.png" alt="" class="btn" /></a>
+            <a href="tutorial.html"><img src="./assets/images/tutorial_button_red.png" alt="" class="btn" /></a>
+            <img src="./assets/images/speaker_mute.png" width="80" alt="" class="mute_btn" onclick="mute('game')" ; />
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <script src="./js/game.js"></script>
-  <script src="./js/explosion.js"></script>
-  <script src="./js/sounds.js"></script>
-</body>
-
+    <script src="./js/game.js"></script>
+    <script src="./js/explosion.js"></script>
+    <script src="./js/sounds.js"></script>
+  </body>
 </html>
