@@ -323,7 +323,7 @@ function drop() {
     dropPiece();
     blockPlace.play();
     removeLines();
-    increaseLevel(); // NEW CODE
+    increaseLevel(); // Author: Tim Moran
     setCurrentPiece(next);
     setNextPiece(randomPiece());
     clearActions();
