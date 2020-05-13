@@ -450,12 +450,12 @@ function drawRows() {
   }
 }
 
-// NEW CODE
+// Author: Tim Moran
 function drawLevel() {
   document.querySelector('#level').innerText = level;
 }
 
-// NEW CODE
+// Author: Tim Moran
 function increaseLevel() {
   if (score > 499 && score < 1000) {
     level = 2;
@@ -476,26 +476,26 @@ function increaseLevel() {
   } else if (score > 2999 && score < 3500) {
     level = 7;
     speed.start = 0.3;
-  } else if (score > 2999 && score < 3500) {
+  } else if (score > 3499 && score < 4000) {
     level = 8;
     speed.start = 0.25;
-  } else if (score > 3499 && score < 4000) {
+  } else if (score > 3999 && score < 4500) {
     level = 9;
     speed.start = 0.2;
-  } else if (score > 3999 && score < 4500) {
+  } else if (score > 4499 && score < 5000) {
     level = 10;
     speed.start = 0.15;
   }
 }
 
-// NEW CODE
+// Author: Tim Moran
 function setScoreStats() {
   localStorage.setItem('score', score);
   localStorage.setItem('level', level);
   localStorage.setItem('lines', rows);
   setHighestScore();
 }
-// NEW CODE
+// Author: Tim Moran
 function setHighestScore() {
   if (localStorage.highestScore) {
     if (localStorage.highestScore < score) {
