@@ -192,8 +192,8 @@ function lose() {
   show('start');
   setVisualScore();
   playing = false;
-  setScoreStats();
-  window.location.href = 'gameover.html';
+  setScoreStats(); // Author: Tim Moran
+  window.location.href = 'gameover.html'; // Author: Tim Moran
 }
 
 function setVisualScore(n) {
@@ -311,7 +311,7 @@ function move(dir) {
 function rotate() {
   var newdir = current.dir == DIR.MAX ? DIR.MIN : current.dir + 1;
   if (unoccupied(current.type, current.x, current.y, newdir)) {
-    blockRotate.play();
+    blockRotate.play(); // Author: Rylie Boon-Seaton
     current.dir = newdir;
     invalidate();
   }
@@ -321,7 +321,7 @@ function drop() {
   if (!move(DIR.DOWN)) {
     addScore(10);
     dropPiece();
-    blockPlace.play();
+    blockPlace.play(); // Author: Rylie Boon-Seaton
     removeLines();
     increaseLevel(); // Author: Tim Moran
     setCurrentPiece(next);
@@ -430,7 +430,6 @@ function drawNext() {
     drawPiece(uctx, next.type, padding, padding, next.dir);
     uctx.strokeStyle = 'black';
     uctx.strokeRect(0, 0, nu * dx - 1, nu * dy - 1);
-
     uctx.restore();
     invalid.next = false;
   }

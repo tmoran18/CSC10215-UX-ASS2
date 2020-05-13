@@ -43,6 +43,7 @@ blockPlace.volume = 0.05;
 gameoverMusic.volume = 0.07;
 pressPlay.volume = 0.07;
 
+// Authors: Tim Moran / Rylie Boon-Seaton
 // If the url contains X, then play the music specific to that page
 if (window.location.pathname.includes('index')) {
   homeMusic.pause();
@@ -50,14 +51,11 @@ if (window.location.pathname.includes('index')) {
 } else if (window.location.pathname.includes('game')) {
   gameMusic.play();
   gameMusic.loop = true;
-  // add in the music file location
-  // adjust volume
-  // play()
-  // loop
 } else if (window.location.pathname.includes('gameover')) {
   gameoverMusic.play();
 }
 
+// Author: Tim Moran
 // Each mute button on each page has an onclick event for mute()
 // The page name is passed into the mute function, which is evaluated in the below switch statment
 // The correct music file in then passed to musicPlaying to pause or play the correct music file
@@ -68,6 +66,7 @@ function mute(page) {
       break;
     case 'game':
       musicPlaying = gameMusic;
+      break;
     default:
       break;
   }
@@ -80,7 +79,7 @@ function mute(page) {
   }
 }
 
-/*
+/* Author: Tim Moran
  * Loop over all buttons with the .btn class
  * Add event listener for mouseover, play mouse over sound on mouse over
  */
@@ -91,6 +90,7 @@ for (const button of buttons) {
   });
 }
 
+// Author Tim Moran
 document.querySelector('.play_btn').addEventListener('click', function () {
   pressPlay.play();
 });

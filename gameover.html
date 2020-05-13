@@ -1,33 +1,30 @@
+<!--
+    Author/s: Tim Moran
+    Title: Game Over Page
+    Date: 04/05/2020
+    Description: The HTML Page showing the game over and score stats
+-->
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <link rel="stylesheet" href="styles.css" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blocks - Game Over</title>
-</head>
-
-<body>
-  <section class="main gameover_bg">
-    <div class="highScore"></div>
-    <div class="stats_container">
-      <div class="score blue_box">
-        Score:&nbsp;<span class="green_font" id="id_score"></span>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blocks - Game Over</title>
+  </head>
+  <body>
+    <section class="main gameover_bg">
+      <div class="highScore"></div>
+      <div class="stats_container">
+        <div class="score blue_box">Score:&nbsp;<span class="green_font" id="id_score"></span></div>
+        <div class="level blue_box">Level:&nbsp;<span class="green_font" id="id_level"></span></div>
+        <div class="lines blue_box">Lines:&nbsp;<span class="green_font" id="id_lines"></span></div>
       </div>
-      <div class="level blue_box">
-        Level:&nbsp;<span class="green_font" id="id_level"></span>
+      <div class="btns_bottom">
+        <a href="game.html"><img src="./assets/images/play_again_button_yellow.png" alt="" class="btn" /></a>
+        <a href="credits.html"><img src="./assets/images/credits_button.png" alt="" class="btn" /></a>
       </div>
-      <div class="lines blue_box">
-        Lines:&nbsp;<span class="green_font" id="id_lines"></span>
-      </div>
-    </div>
-    <div class="btns_bottom">
-      <a href="game.html"><img src="./assets/images/play_again_button_yellow.png" alt="" class="btn" /></a>
-      <a href="credits.html"><img src="./assets/images/credits_button.png" alt="" class="btn" /></a>
-    </div>
-  </section>
-  <script src="./js/gameover.js"></script>
-</body>
-
+    </section>
+    <script src="./js/gameover.js"></script>
+  </body>
 </html>
