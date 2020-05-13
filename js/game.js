@@ -358,8 +358,8 @@ function removeLines() {
   if (n > 0) {
     addRows(n);
     addScore(100 * Math.pow(2, n - 1)); // 1: 100, 2: 200, 3: 400, 4: 800
-    lineComplete.play();
-    window.Canvas = new Universe(element);
+    lineComplete.play(); // Author: Tim Moran
+    window.Canvas = new Universe(element); // Author: Tim Moran
   }
 }
 
@@ -399,7 +399,7 @@ function draw() {
   drawNext();
   drawScore();
   drawRows();
-  drawLevel(); // NEW CODE
+  drawLevel(); // Author: Tim Moran
   ctx.restore();
 }
 
