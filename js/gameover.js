@@ -1,14 +1,18 @@
-// Score Variables
-gameoverScore = localStorage.getItem('score');
-gameoverLevel = localStorage.getItem('level');
-gameoverLines = localStorage.getItem('lines');
-gameoverHighScore = localStorage.getItem('highestScore');
+// Author: Tim Moran
+// Get the score & stats from local storage and store in variables
+let gameoverScore = localStorage.getItem('score');
+let gameoverLevel = localStorage.getItem('level');
+let gameoverLines = localStorage.getItem('lines');
+let gameoverHighScore = localStorage.getItem('highestScore');
+
+// Author: Tim Moran
+// Set the score & stats to HTML elements
 document.querySelector('#id_score').innerText = gameoverScore;
 document.querySelector('#id_level').innerText = gameoverLevel;
 document.querySelector('#id_lines').innerText = gameoverLines;
 document.querySelector('.highScore').innerText = gameoverHighScore;
 
-// Star Animation
+// Glitter Star Animation
 var gameOverPage = document.querySelector('.gameover_bg');
 for (let i = 0; i < 50; i++) {
   const delay = Math.random() + 's';

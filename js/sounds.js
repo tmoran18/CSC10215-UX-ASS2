@@ -1,38 +1,15 @@
-var buttonMouseOnSound;
-var buttonMouseOffSound;
-var buttonClickSound;
-var buttonHoverSound;
-var menuMusic;
-var musicPlaying;
-
-/* function preload() {
-    // ------------------------- Sounds ---------------------------
-    buttonMouseOnSound = loadSound('../assets/sounds/menu/button_mouse_on_sound.mp3');
-    buttonMouseOffSound = loadSound('../assets/sounds/menu/button_mouse_off_sound.mp3');
-    buttonMouseClickSound = loadSound('../assets/sounds/menu/button_click_sound.mp3');
-    buttonHoverSound = loadSound('../assets/sounds/menu/button_hover_sound.mp3')
-
-    // ------------------------- Music ----------------------------
-    menuMusic = loadSound('../assets/sounds/music/menu_music.mp3');
-    gameMusic = loadSound('../assets/sounds/music/game_music.mp3');
-} */
-
-/*
-    Vanilla JavaScript Alternative to PJ5 Sounds
-*/
-
-// Create music Variables
+// Music Variables
+let musicPlaying;
 const homeMusic = new Audio('../assets/sounds/music/menu_music.mp3');
 const gameMusic = new Audio('../assets/sounds/music/game_music.mp3');
 const gameoverMusic = new Audio('../assets/sounds/game/gameover_sound.mp3');
 const mouseOnSound = new Audio('../assets/sounds/menu/button_mouse_on_sound.mp3');
 const clickSound = new Audio('../assets/sounds/menu/button_click_sound.mp3');
-
 const blockRotate = new Audio('../assets/sounds/game/block_rotate_sound.mp3');
 const blockPlace = new Audio('../assets/sounds/game/block_place_sound.mp3');
-const levelUp = new Audio('../assets/sounds/game/level_up.wav');
 const pressPlay = new Audio('../assets/sounds/game/press_play.wav');
 const lineComplete = new Audio('../assets/sounds/game/row_complete/row_complete_sound_1.wav');
+// const levelUp = new Audio('../assets/sounds/game/level_up.wav'); // Not implemented yet, needs further investigation
 
 // Adjust the volumes
 homeMusic.volume = 0.05;
@@ -44,7 +21,7 @@ gameoverMusic.volume = 0.07;
 pressPlay.volume = 0.07;
 
 // Authors: Tim Moran / Rylie Boon-Seaton
-// If the url contains X, then play the music specific to that page
+// If the url pathname contains 'X', then play the music specific to that page
 if (window.location.pathname.includes('index')) {
   homeMusic.pause();
   homeMusic.loop = true;
@@ -53,12 +30,13 @@ if (window.location.pathname.includes('index')) {
   gameMusic.loop = true;
 } else if (window.location.pathname.includes('gameover')) {
   gameoverMusic.play();
+  gameoverMusic.loop = true;
 }
 
 // Author: Tim Moran
-// Each mute button on each page has an onclick event for mute()
+// Each mute icon on each page has an onclick event function - mute()
 // The page name is passed into the mute function, which is evaluated in the below switch statment
-// The correct music file in then passed to musicPlaying to pause or play the correct music file
+// The correct music file is then passed to musicPlaying to pause or play the correct music file
 function mute(page) {
   switch (page) {
     case 'home':
@@ -79,10 +57,9 @@ function mute(page) {
   }
 }
 
-/* Author: Tim Moran
- * Loop over all buttons with the .btn class
- * Add event listener for mouseover, play mouse over sound on mouse over
- */
+// Author: Tim Moran
+// Loop over all buttons with the .btn class
+// Add event listener for mouseover, play mouse over sound on mouse over
 const buttons = document.querySelectorAll('.btn');
 for (const button of buttons) {
   button.addEventListener('mouseover', function (event) {
@@ -91,6 +68,7 @@ for (const button of buttons) {
 }
 
 // Author Tim Moran
+// Add an event listener to the play button on game page, play sound when clicked
 document.querySelector('.play_btn').addEventListener('click', function () {
   pressPlay.play();
 });

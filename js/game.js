@@ -26,7 +26,6 @@ function randomChoice(choices) {
 }
 
 if (!window.requestAnimationFrame) {
-  // http://paulirish.com/2011/requestanimationframe-for-smart-animating/
   window.requestAnimationFrame =
     window.webkitRequestAnimationFrame ||
     window.mozRequestAnimationFrame ||
@@ -82,6 +81,7 @@ function eachblock(type, x, y, dir, fn) {
 //-----------------------------------------------------
 // check if a piece can fit into a position in the grid
 //-----------------------------------------------------
+
 function occupied(type, x, y, dir) {
   var result = false;
   eachblock(type, x, y, dir, function (x, y) {
@@ -138,11 +138,11 @@ function addEvents() {
 
 function resize(event) {
   canvas.width = canvas.clientWidth; // set canvas logical size equal to its physical size
-  canvas.height = canvas.clientHeight; // (ditto)
+  canvas.height = canvas.clientHeight; // set canvas logical size equal to its physical size
   ucanvas.width = ucanvas.clientWidth;
   ucanvas.height = ucanvas.clientHeight;
   dx = canvas.width / nx; // pixel size of a single tetris block
-  dy = canvas.height / ny; // (ditto)
+  dy = canvas.height / ny; // pixel size of a single tetris block
   invalidate();
   invalidateNext();
 }
@@ -449,17 +449,34 @@ function drawRows() {
   }
 }
 
+function drawPiece(ctx, type, x, y, dir) {
+  eachblock(type, x, y, dir, function (x, y) {
+    drawBlock(ctx, x, y, type.color);
+  });
+}
+
+function drawBlock(ctx, x, y, color) {
+  ctx.fillStyle = color;
+  ctx.fillRect(x * dx, y * dy, dx, dy);
+  ctx.strokeRect(x * dx, y * dy, dx, dy);
+}
+
+//-------------------------------------------------------------------------
+// NEW GAME CODE
+//-------------------------------------------------------------------------
+
 // Author: Tim Moran
+// Set the level on HTML pages
 function drawLevel() {
   document.querySelector('#level').innerText = level;
 }
 
 // Author: Tim Moran
+// Checks score range and adjusts the score / speed accordingly
 function increaseLevel() {
   if (score > 499 && score < 1000) {
     level = 2;
     speed.start = 0.55;
-    console.log('levelup');
   } else if (score > 999 && score < 1500) {
     level = 3;
     speed.start = 0.5;
@@ -488,13 +505,21 @@ function increaseLevel() {
 }
 
 // Author: Tim Moran
+// Sets the score, level and lines into Local Storage for persisting data
 function setScoreStats() {
   localStorage.setItem('score', score);
   localStorage.setItem('level', level);
   localStorage.setItem('lines', rows);
   setHighestScore();
 }
+
 // Author: Tim Moran
+// Check if highest score exists in local storage
+// if true, check if highest score in local storage is less than score;
+// if true, set new highscore to score
+// if false, return nothing
+// if highest score does not exist in local storage
+// Create a highest score in local storage equal to score
 function setHighestScore() {
   if (localStorage.highestScore) {
     if (localStorage.highestScore < score) {
@@ -505,18 +530,6 @@ function setHighestScore() {
   } else {
     localStorage.setItem('highestScore', score);
   }
-}
-
-function drawPiece(ctx, type, x, y, dir) {
-  eachblock(type, x, y, dir, function (x, y) {
-    drawBlock(ctx, x, y, type.color);
-  });
-}
-
-function drawBlock(ctx, x, y, color) {
-  ctx.fillStyle = color;
-  ctx.fillRect(x * dx, y * dy, dx, dy);
-  ctx.strokeRect(x * dx, y * dy, dx, dy);
 }
 
 //-------------------------------------------------------------------------
