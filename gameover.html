@@ -1,5 +1,5 @@
 <!--
-    Author/s: Tim Moran
+    Author/s: Tim Moran, Mitchell Squibb
     Title: Game Over Page
     Date: 04/05/2020
     Description: The HTML Page showing the game over and score stats
@@ -15,6 +15,7 @@
 </head>
 
 <body>
+  <!--Game Over Page - display highscore, credits button, play again, and home button. -->
   <section class="main gameover_bg">
     <div class="highScore"></div>
     <div class="stats_container">
@@ -25,7 +26,9 @@
     <div class="btns_bottom">
       <a href="game.html"><img src="./assets/images/play_again_button_yellow.png" alt="" class="btn" /></a>
       <a href="credits.html"><img src="./assets/images/credits_button.png" alt="" class="btn" /></a>
-    </div>
+      <!--User Feedback suggested a home button on the gameover page.-->
+      <a href="index.html"><img src="./assets/images/home_button.png" alt="" class="btn" /></a>   
+    
   </section>
   <script src="./js/gameover.js"></script>
   <script src="./js/sounds.js"></script>
