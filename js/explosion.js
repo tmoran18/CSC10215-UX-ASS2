@@ -1,4 +1,4 @@
-// Authers: Tim Moran, Rylie Boon-Seaton, Mitchell-Andrew Squibb
+// Authers: @Boris_ Codepen - Confetti Colour Explosion - https://codepen.io/boris_/pen/rGBEgx
 // Description: Explosion when a line is cleared
 
 
