@@ -14,7 +14,9 @@ document.querySelector('#id_level').innerText = gameoverLevel;
 document.querySelector('#id_lines').innerText = gameoverLines;
 document.querySelector('.highScore').innerText = gameoverHighScore;
 
+//Author: BC Rikko - JS Fiddle
 // Glitter Star Animation
+// Some extension with Imagery by Tim Moran
 var gameOverPage = document.querySelector('.gameover_bg');
 for (let i = 0; i < 50; i++) {
   const delay = Math.random() + 's';
@@ -30,6 +32,7 @@ for (let i = 0; i < 50; i++) {
   gameOverPage.appendChild(el);
 }
 
+//Author: BC Rikko - JS Fiddle - https://jsfiddle.net/bc_rikko/qwbfkv6y/2/
 // Random function to use in the star animation
 function random() {
   let r = 50;
