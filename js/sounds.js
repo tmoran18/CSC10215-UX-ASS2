@@ -1,3 +1,4 @@
+// Authors: Tim Moran / Rylie Boon-Seaton
 // Music Variables
 let musicPlaying;
 const homeMusic = new Audio('../assets/sounds/music/menu_music.mp3');
@@ -11,6 +12,7 @@ const pressPlay = new Audio('../assets/sounds/game/press_play.wav');
 const lineComplete = new Audio('../assets/sounds/game/row_complete/row_complete_sound_1.wav');
 // const levelUp = new Audio('../assets/sounds/game/level_up.wav'); // Not implemented yet, needs further investigation
 
+// Authors: Tim Moran / Rylie Boon-Seaton
 // Adjust the volumes
 homeMusic.volume = 0.05;
 mouseOnSound.volume = 0.07;
