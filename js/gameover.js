@@ -1,5 +1,7 @@
 // Author: Tim Moran
 // Get the score & stats from local storage and store in variables
+// Game Over page to display when player has failed to remove blocks within the time provided.
+
 let gameoverScore = localStorage.getItem('score');
 let gameoverLevel = localStorage.getItem('level');
 let gameoverLines = localStorage.getItem('lines');

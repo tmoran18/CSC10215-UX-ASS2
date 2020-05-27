@@ -1,3 +1,8 @@
+// Authers: Tim Moran, Rylie Boon-Seaton, Mitchell-Andrew Squibb
+// Description: Explosion when a line is cleared
+
+
+
 const getRandom = (min, max) => {
     return Math.random() * (max - min) + min;
 };
@@ -5,6 +10,8 @@ const getRandom = (min, max) => {
 const getRandomInt = (min, max) => {
     return Math.floor(Math.random() * (max - min)) + min;
 };
+
+//make the colours of the explosion particles
 
 const getRandomColor = () => {
     const colors = [
@@ -19,6 +26,7 @@ const getRandomColor = () => {
 };
 
 // Particle
+// assign colours of the explosion particle
 
 class Particle {
 
