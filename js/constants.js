@@ -1,5 +1,5 @@
 //-------------------------------------------------------------------------
-// game constants
+// game constants  -- Sourced from: https://bit.ly/3c729TN AND https://youtu.be/Wcb0_Q9r6i4
 //-------------------------------------------------------------------------
 
 let KEY = { ESC: 27, SPACE: 32, LEFT: 37, UP: 38, RIGHT: 39, DOWN: 40 };

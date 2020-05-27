@@ -1,5 +1,5 @@
 //-------------------------------------------------------------------------
-// base helper methods
+// base helper methods -- Sourced from: https://bit.ly/3c729TN AND https://youtu.be/Wcb0_Q9r6i4
 //-------------------------------------------------------------------------
 
 function get(id) {
@@ -37,7 +37,7 @@ if (!window.requestAnimationFrame) {
 }
 
 //-------------------------------------------------------------------------
-// game variables (initialized during reset)
+// game variables (initialized during reset) -- Sourced from: https://bit.ly/3c729TN AND https://youtu.be/Wcb0_Q9r6i4
 //-------------------------------------------------------------------------
 
 let ucanvas = get('upcoming');
@@ -111,7 +111,7 @@ function randomPiece() {
 }
 
 //-------------------------------------------------------------------------
-// GAME LOOP
+// GAME LOOP -- Sourced from: https://bit.ly/3c729TN AND https://youtu.be/Wcb0_Q9r6i4
 //-------------------------------------------------------------------------
 
 function run() {
@@ -180,7 +180,7 @@ function keydown(ev) {
 }
 
 //-------------------------------------------------------------------------
-// GAME LOGIC
+// GAME LOGIC -- Sourced from: https://bit.ly/3c729TN AND https://youtu.be/Wcb0_Q9r6i4
 //-------------------------------------------------------------------------
 
 function play() {
@@ -371,7 +371,7 @@ function removeLine(n) {
 }
 
 //-------------------------------------------------------------------------
-// RENDERING
+// RENDERING -- Sourced from: https://bit.ly/3c729TN AND https://youtu.be/Wcb0_Q9r6i4
 //-------------------------------------------------------------------------
 
 var invalid = {};
@@ -462,7 +462,7 @@ function drawBlock(ctx, x, y, color) {
 }
 
 //-------------------------------------------------------------------------
-// NEW GAME CODE
+// NEW GAME CODE -- Sourced from: https://bit.ly/3c729TN AND https://youtu.be/Wcb0_Q9r6i4
 //-------------------------------------------------------------------------
 
 // Author: Tim Moran
