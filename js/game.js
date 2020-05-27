@@ -1,5 +1,6 @@
 //-------------------------------------------------------------------------
-// base helper methods -- Sourced from: https://bit.ly/3c729TN AND https://youtu.be/Wcb0_Q9r6i4
+// Core code sourced from Jake Gordon - Code Incomplete - JavaScript Tetris - Tutorial
+// Code extendensions have been commented throughout with contributing Authors: Tim Moran / Rylie Boon-Seaton
 //-------------------------------------------------------------------------
 
 function get(id) {
@@ -111,7 +112,7 @@ function randomPiece() {
 }
 
 //-------------------------------------------------------------------------
-// GAME LOOP -- Sourced from: https://bit.ly/3c729TN AND https://youtu.be/Wcb0_Q9r6i4
+// GAME LOOP
 //-------------------------------------------------------------------------
 
 function run() {
@@ -180,7 +181,7 @@ function keydown(ev) {
 }
 
 //-------------------------------------------------------------------------
-// GAME LOGIC -- Sourced from: https://bit.ly/3c729TN AND https://youtu.be/Wcb0_Q9r6i4
+// GAME LOGIC
 //-------------------------------------------------------------------------
 
 function play() {
@@ -371,7 +372,7 @@ function removeLine(n) {
 }
 
 //-------------------------------------------------------------------------
-// RENDERING -- Sourced from: https://bit.ly/3c729TN AND https://youtu.be/Wcb0_Q9r6i4
+// RENDERING
 //-------------------------------------------------------------------------
 
 var invalid = {};
@@ -462,7 +463,7 @@ function drawBlock(ctx, x, y, color) {
 }
 
 //-------------------------------------------------------------------------
-// NEW GAME CODE -- Sourced from: https://bit.ly/3c729TN AND https://youtu.be/Wcb0_Q9r6i4
+// NEW GAME CODE
 //-------------------------------------------------------------------------
 
 // Author: Tim Moran
